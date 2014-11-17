@@ -1,11 +1,29 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
 <head>
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
   <script src="js/main.js"></script>
 	<title>Newsletter</title>
 </head>
 <body>
-
+<div class="container">
+<div class="row">
+	<div class="jumbotron text-center">
+		<h2>Angular Audio Player!</h2>
+	</div>
+</div>
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4 well text-center" ng-controller="PlayerController">
+			<button ng-click="play()" class="btn btn-primary" ng-show="!playing">
+				Play
+			</button>
+			<button ng-click="stop()" class="btn btn-alert" ng-show"playing">
+				Stop
+			</button>
+				Playing audio: <strong>{{ playing }}</strong>
+		</div>
+	</div>
+</div>
 </body>
 </html>
